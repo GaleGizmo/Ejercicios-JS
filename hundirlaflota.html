@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hundir la Flota</title>
+    <style>
+      #tablero-de-juego {
+        width: 700px;
+        height: 500px;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        margin: 0 auto;
+        background-color: gray;
+        gap: 2px;
+      }
+      #info-disparos {
+        display: flex;
+        width: 700px;
+        height: 50px;
+        margin: 0 auto;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 700;
+        position: relative;
+      }
+      .info-barcos {
+        position: absolute;
+        bottom: -200px;
+        left: -240px;
+        width: 200px;
+        padding: 10px;
+        border-radius: 15%;
+        border: 4px solid cornflowerblue;
+        background-color: azure;
+      }
+      span[class^="info-barcos__"] {
+        font-size: 14px;
+      }
+      .disparos {
+        color: brown;
+        font-size: large;
+        padding-left: 5px;
+        margin: auto 0;
+      }
+      #disparos-restantes {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .casilla {
+        background-color: cornflowerblue;
+        color: white;
+        font-size: 18px;
+      }
+      .agua {
+        background-color: blue;
+        font-size: 22px;
+        color: white;
+      }
+
+      .hundido {
+        background-color: red;
+      }
+      .hundidos {
+        color: red;
+        padding-left: 5px;
+      }
+      .quedan {
+        color: forestgreen;
+        padding-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info-disparos">
+      <p id="disparos-restantes">DISPAROS RESTANTES:</p>
+      <div class="info-barcos">
+        BARCOS RESTANTES:
+        <hr />
+        <span id="info-barcos__port">PORTAAVIONES: </span
+        ><span id="port" class="tipos-de-barcos">1</span><br />
+        <span id="info-barcos__dest">DESTRUCTOR: </span
+        ><span id="dest" class="tipos-de-barcos">2</span><br />
+        <span id="info-barcos__acor">ACORAZADO: </span
+        ><span id="acor" class="tipos-de-barcos">3</span><br />
+        <span id="info-barcos__frag">FRAGATA: </span
+        ><span id="frag" class="tipos-de-barcos">4</span><br /><br />
+        <span id="barcos-hundidos">HUNDIDOS:</span><br />
+        <span id="barcos-quedan">QUEDAN:</span>
+      </div>
+    </div>
+    <div id="tablero-de-juego"></div>
+
+    <script type="module" src="hundirlaflota.js"></script>
+  </body>
+</html>
