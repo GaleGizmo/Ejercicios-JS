@@ -1,0 +1,1 @@
+document.body.innerHTML="<p>Soy dinámico!</p>"
