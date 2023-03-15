@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="exercise-1.js" defer></script>
+    <title>Document</title>
+  </head>
+  <style>
+    @font-face {
+      
+      font-family: "starwars-outline";
+      src: url("./fonts/SfDistantGalaxyOutline-xoeO.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: "starwars";
+      src: url("./fonts/SfDistantGalaxy-0l3d.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+      
+    }
+    body {
+      margin: 0 auto;
+      font-family: "starwars";
+      background-image: url("https://p4.wallpaperbetter.com/wallpaper/955/69/70/minimalism-space-stars-wallpaper-preview.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+hr{
+    width: 80%;
+    height: 3px;
+    
+    background-color: yellow;
+    border-radius: 45%;
+    border: 4px solid yellow;
+    margin-bottom: 30px;
+}
+    .header {
+      margin: 20px auto 10px auto;
+      /* font-family: "starwars"; */
+      text-align: center;
+      height: 180px;
+      width: 60%;
+    }
+    h1 {
+        font-family: "starwars-outline";
+      font-size: 64px;
+      color: yellow;
+      /* animation: enlarge 2s ease-out; */
+      animation-duration: 2s;
+      animation-timing-function: ease-out;
+      margin: 0;
+    }
+    button{display: inline;
+        color: rgb(221, 18, 18);
+        font-family:'starwars';
+        font-size: 12px;
+        
+        border: 2px solid;
+        border-radius: 15%;
+        margin: 5px 5px;
+    }
+    @keyframes enlarge {
+      from {
+        font-size: 2px;
+      }
+      to {
+        font-size: 64px;
+      }
+    }
+    #container {
+        padding-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        /* justify-content: center; */
+      font-family: "starwars";
+      margin-left: 20%;
+      margin-right: 20%;
+      border: 6px solid yellow;
+      border-radius: 10%;
+      width: 60%;
+      height: 500px;
+      text-align: center;
+      background-color: darkgoldenrod;
+    }
+    p{
+        font-family: 'starwars';
+        font-size: 32px;
+        color: yellowgreen;
+        margin-top: 8px;
+        margin-bottom: 2px;
+    }
+    span{
+        margin-top: 5px;
+        font-family: 'starwars';
+        font-size: 14px;
+        color: white;
+    }
+  </style>
+  <header class="header">
+    <h1>STAR WARS</h1>
+  </header>
+  <body>
+    <div id="container"></div>
+  </body>
+</html>
